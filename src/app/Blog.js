@@ -1,8 +1,8 @@
 import React from 'react'
 import * as contentful from 'contentful'
 import BlogItem from './blog/BlogItem';
-import PageHeader from '../components/PageHeader'
-import PageContent from '../components/PageContent'
+import PageHeader from './components/PageHeader'
+import PageContent from './components/PageContent'
 
 
 class Blog extends React.Component {
@@ -26,8 +26,8 @@ class Blog extends React.Component {
         const { posts } = this.state;
         return (
             <>
-                <PageHeader color="is-info" title="Code Blog">
-                    Your standard <strong>JavaScript</strong> programming blog, albeit, probably not very good, but I will at least try to keep it entertaining. This blog is a chronological mix of random posts on Angular, React, Functional Programming, and my <strong>project walkthroughs</strong>.
+                <PageHeader color="is-info" title="Lorem Blogging">
+                From its medieval origins to the <strong>digital</strong> era, learn everything there is to know about the ubiquitous lorem ipsum passage.
                 </PageHeader>
                 <PageContent>
                     {

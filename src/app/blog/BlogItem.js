@@ -4,7 +4,6 @@ import BlogContent from './shared/BlogContent'
 
 
 const BlogItem = (props) => (
-  console.log(props),
   <div className="box">
     <BlogContent limit={150} {...props}>
       <BlogNav

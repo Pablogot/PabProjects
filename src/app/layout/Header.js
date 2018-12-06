@@ -24,21 +24,8 @@ class Header extends React.Component {
                     <NavLink
                         className="navbar-item"
                         to="/"
-                        activeClassName="is-active"
                     >
-                        <img
-                            style={{
-                                borderTopLeftRadius: '50%',
-                                borderTopRightRadius: '50%',
-                                borderBottomLeftRadius: '50%',
-                                borderBottomRightRadius: '50%',
-                                marginRight: 15
-                            }}
-                            src="https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAU3AAAAJGE1MzYxNzYzLTE1NTUtNDEyYi04MzRjLTgzZjNkOGU0MGIzNg.jpg"
-                            width="30px"
-                            alt=""
-                        />
-                        <span>PabsProjects</span>
+                        <span className="Logo">PabsProjects</span>
                     </NavLink>
                     <button className="button navbar-burger" onClick={this.toggleNav}>
                         <span></span>
@@ -56,7 +43,7 @@ class Header extends React.Component {
                             <span className="icon has-text-primary" style={{ marginRight: 5 }}>
                                 <i className="fas fa-code"></i>
                             </span>
-                            Code Blog
+                            Blog
                         </NavLink>
                         <a href="/#" className="navbar-item">
                             <span className="icon" style={{ marginRight: 5 }}>
@@ -64,21 +51,6 @@ class Header extends React.Component {
                             </span>
                             Medium
                         </a>
-                        <div className="navbar-item has-dropdown is-hoverable">
-                            <a href="/#" className="navbar-link" >
-                                Projects
-                            </a>
-                            <div className="navbar-dropdown">
-                                <a href="/#" className="navbar-item" >
-                                    Overview
-                                </a>
-                                <hr className="navbar-divider" />
-                                <a href="/#" className="navbar-item">
-                                    This Site
-                                </a>
-
-                            </div>
-                        </div>
                     </div>
                     <div className="navbar-end">
                         <a className="navbar-item" href="https://github.com/Pablogot">

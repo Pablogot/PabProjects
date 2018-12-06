@@ -6,7 +6,7 @@ export default function BlogContent({ title, icon, limit, children, content }, p
         <article className="media">
             <div className="media-left">
                 <figure className="image is-64x64">
-                    <img src={icon} alt="Image" />
+                    <svg src={icon} alt="Image" />
                 </figure>
             </div>
             <div className="media-content">
