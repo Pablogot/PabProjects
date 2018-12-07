@@ -1,36 +1,54 @@
 
 @import "../node_modules/bulma/sass/utilities/initial-variables";
 @import "../node_modules/bulma/sass/utilities/functions";
-
-$purple: hsl(275,87%,45%);
-$purple-invert: findColorInvert($purple);
-
-$info:rgb(14, 214, 197);
-
+@import "../node_modules/bulma/bulma";
 @import "../node_modules/bulma/sass/utilities/derived-variables.sass";
-$addColors: (
-        "purple":($purple, $purple-invert),
-);
-$colors: map-merge($colors, $addColors);
-@import '../node_modules/bulma/bulma';
-//@import '../node_modules/bulma-extensions/extensions';
+@import "../node_modules/bulma/bulma";
+@import "./grid.scss";
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+// *:not(path):not(g) {
+// 	color:                    hsla(210, 100%, 100%, 0.9) !important;
+// 	background:               hsla(210, 100%,  50%, 0.5) !important;
+// 	outline:    solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
+
+// 	box-shadow: none !important;
+// }
+
+// $purple: hsl(275,87%,45%);
+// $purple-invert: findColorInvert($purple);
+
+// $info:rgb(14, 214, 197);
+
+
+// $addColors: (
+//         "purple":($purple, $purple-invert),
+// );
+// $colors: map-merge($colors, $addColors);
+
+
+
+
+.center, .center-column, .top, .right, .bottom, .left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.Logo{
-  background: #666666;
-  border-radius: .3rem;
-  padding: 5px 10px;
-  color: $warning;
+
+.center-column {
+    flex-direction: column;
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+
+.top    { align-items:     flex-start; }
+.right  { justify-content: flex-end;   }
+.bottom { align-items:     flex-end;   }
+.left   { justify-content: flex-start; }
+
+.single-spaced, .single-spaced * {
+    line-height: 1;
+}
+
+@media (max-width: 1024px) {
+	.desktop {
+		display: none;
+	}
 }

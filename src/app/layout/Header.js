@@ -15,51 +15,29 @@ class Header extends React.Component {
 
     render() {
         return (
-            <nav className="navbar"
-                aria-label="main navigation"
-                style={{
-                    borderBottom: 'solid 1px #dddddd',
-                }}>
-                <div className="navbar-brand">
-                    <NavLink
-                        className="navbar-item"
-                        to="/"
-                    >
-                        <span className="Logo">PabsProjects</span>
-                    </NavLink>
-                    <button className="button navbar-burger" onClick={this.toggleNav}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-                <div className={this.state.isActive ? 'navbar-menu is-active' : 'navbar-menu'}>
-                    <div className="navbar-start">
-                        <NavLink
-                            className="navbar-item"
-                            to="/blog"
-                            activeClassName="is-active"
-                        >
-                            <span className="icon has-text-primary" style={{ marginRight: 5 }}>
-                                <i className="fas fa-code"></i>
-                            </span>
+            <nav className="hero-head" aria-label="main navigation">
+                <div class="columns is-mobile is-marginless heading has-text-weight-bold">
+                    <div class="column left">
+                        <NavLink className="navbar-item has-text-black" to="/" >
+                            <figure class="navbar-item image">
+                                <h1 className="Logo"><i className="fas fa-lg fa-code"></i> Pab Projects</h1>
+                            </figure>
+                        </NavLink>
+                    </div>
+                    <div className='column right'>
+                        <NavLink to="/blog" className="navbar-item has-text-black" activeClassName="is-active">
                             Blog
                         </NavLink>
-                        <a href="/#" className="navbar-item">
-                            <span className="icon" style={{ marginRight: 5 }}>
-                                <i className="fab fa-lg fa-medium"></i>
-                            </span>
+                        <NavLink className="navbar-item has-text-black" to="/medium" activeClassName="is-active">
                             Medium
-                        </a>
+                        </NavLink>
+                        <figure class="navbar-item desktop image has-text-black">
+                            <a href="https://github.com/Pablogot">
+                                <i className="fab fa-lg fa-github has-text-black" style={{width: '1rem', height: '1rem'}}></i>
+                            </a>
+                        </figure>
                     </div>
-                    <div className="navbar-end">
-                        <a className="navbar-item" href="https://github.com/Pablogot">
-                            <span className="icon">
-                                <i className="fab fa-lg fa-github"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div >
+                </div>
             </nav >
         )
     }
