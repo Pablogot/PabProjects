@@ -4,14 +4,11 @@ import moment from 'moment'
 import StatusTag from './../../components/StatusTag'
 
 const BlogNav = ({ to, date, status }) => (
-    <nav className="level">
-        <div className="level-left">
-            <Link className="level-item button is-small is-link is-outlined" to={to}>Back to Blog</Link>
-        </div>
-        <div className="level-right">
+    <nav className="between">
+        <Link className="button is-white" to={to}>Learn more</Link>
+        <div>
             <StatusTag status={status} />
-
-            <p className="level-item has-text-link is-size-7">
+            <p className="has-text-grey is-size-6">
                 {moment(date).calendar(null, {
                     sameDay: '[Today]',
                     lastDay: '[Yesterday]',
@@ -20,6 +17,7 @@ const BlogNav = ({ to, date, status }) => (
                 })}
             </p>
         </div>
+
     </nav>
 )
 export default BlogNav

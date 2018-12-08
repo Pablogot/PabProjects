@@ -16,7 +16,7 @@ const Layout = ({ children }) => (
                 { name: 'keywords', content: 'Projects by Pablo Llanos' },
             ]}
             script={[
-                { 'src': 'https://use.fontawesome.com/releases/v5.0.4/js/all.js' },
+                { 'src': 'https://use.fontawesome.com/releases/v5.5.0/js/all.js' },
             ]}
             link={[
                 { 'rel': 'stylesheet', 'href': 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' }
