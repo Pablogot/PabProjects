@@ -5,7 +5,7 @@ import StatusTag from './../../components/StatusTag'
 
 const BlogNav = ({ to, date, status }) => (
     <nav className="between">
-        <Link className="button is-white" to={to}>Learn more</Link>
+        <Link className="button is-white" to={to}>{ to === '/blog' ? 'Back to Blog' : 'Read More'}</Link>
         <div>
             <StatusTag status={status} />
             <p className="has-text-grey is-size-6">

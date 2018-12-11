@@ -1,13 +1,13 @@
 import React from 'react'
-const PageHeader = (props) => (
-  <section className={`hero ${props.color}`}>
+const PageHeader = ({color, title, children},props) => (
+  <section className={`hero ${color}`}>
     <div className="hero-body">
       <div className="container">
         <h1 className="title">
-          {props.title}
+          {title}
         </h1>
         <h2 className="subtitle">
-          {props.children}
+          {children}
         </h2>
       </div>
     </div>

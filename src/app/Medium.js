@@ -10,7 +10,7 @@ class Medium extends React.Component {
     componentDidMount() {
         this.fetchPosts().then(this.setPosts)
     }
-    fetchPosts = () => axios.get(`https://cors.now.sh/https://us-central1-aaronklaser-1.cloudfunctions.net/medium?username=@aaron.klaser`)
+    fetchPosts = () => axios.get(`https://cors.now.sh/https://us-central1-pablogot-1.cloudfunctions.net/medium?username=@pablogot`)
 
     setPosts = ({ data }) => {
         const { Post } = data.payload.references
@@ -19,7 +19,7 @@ class Medium extends React.Component {
             createdAt,
             subtitle: virtuals.subtitle,
             image: virtuals.previewImage.imageId ? `https://cdn-images-1.medium.com/max/800/${virtuals.previewImage.imageId}` : null,
-            url: `https://medium.com/@aaron.klaser/${uniqueSlug}`
+            url: `https://medium.com/@pablogot/${uniqueSlug}`
         })
         )
         this.setState({
@@ -31,7 +31,7 @@ class Medium extends React.Component {
             <div>
                 <PageHeader color="is-dark" title="Medium">
                     My medium feed<br /><br />
-                    <a className="button is-inverted is-outlined" href="https://medium.com/@aaron.klaser" target="_blank">
+                    <a className="button is-inverted is-outlined" href="https://medium.com/@pablogot" target="_blank">
                         View My Medium
             <span className="icon" style={{ marginLeft: 5 }}>
                             <i className="fab fa-lg fa-medium"></i>
