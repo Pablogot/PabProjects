@@ -4,46 +4,36 @@ import { connect } from 'react-redux'
 import * as contentful from 'contentful'
 import BlogItem from './blog/BlogItem'
 import PageHeader from './components/PageHeader'
-import PageContent from './components/PageContent'
 import Loader from './Loader'
-
+import { Tile } from 'bloomer'
 
 class Blog extends React.Component {
-    state = {
-        posts: []
-    }
-    client = contentful.createClient({
-        space: '0v3t2s88y22c',
-        accessToken: 'ddca4149951f9ea7524b7374fba81d25ed594c512d16b5d1a0e5ff48f7bec1d9'
-    })
-    componentDidMount() {
-        this.fetchPosts().then(this.setPosts);
-    }
-    fetchPosts = () => this.client.getEntries()
-    setPosts = response => {
-        this.setState({
-            posts: response.items
-        })
-    }
+    
     render() {
-        const { posts } = this.state;
+        const { posts, loading } = this.props.blog
+        
         return (
             <>
                 <PageHeader color="is-light" title="Lorem Blogging">
-                From its medieval origins to the <strong>digital</strong> era, learn everything there is to know about the ubiquitous lorem ipsum passage.
+                    From its medieval origins to the <strong>digital</strong> era, learn everything there is to know about the ubiquitous lorem ipsum passage.
                 </PageHeader>
                 {
-                    this.props.blog.loading ? 
-                    <Loader className="has-text-primary"></Loader>
-                    :
-                    <PageContent>
-                        {
-                            this.props.blog.posts
-                                .map(
-                                    ({ fields }, key) => <BlogItem key={key} {...fields} />
-                                )
-                        }
-                    </PageContent>
+                    loading ?
+                        <Loader className="has-text-primary"></Loader>
+                        :
+                        <Tile isAncestor>
+                            <Tile isSize={4} isChild></Tile>
+                            {
+                                posts.map(
+                                        ({ fields }, key) =>  (
+                                            <Tile isSize={4} isChild>
+                                                <BlogItem key={key} {...fields}/>
+                                            </Tile>
+                                        )
+                                    )
+                            }
+                            
+                        </Tile>
                 }
             </>
         )
@@ -51,7 +41,7 @@ class Blog extends React.Component {
 }
 function mapStateToProps(state, ownProps) {
     return {
-      blog: state.blog
+        blog: state.blog
     }
-  }
-  export default connect(mapStateToProps)(Blog)
+}
+export default connect(mapStateToProps)(Blog)

@@ -13,11 +13,11 @@ const Footer = () => (
                 <p className="title has-text-black">Lor<span className="is-size-5">em</span></p>
                 <p className="subtitle is-7 has-text-black">Lorem Ipsun</p>
             </div>
-            <div id="c" className="center-column" style={{'border-left': '1px solid gray'}}>
+            <div id="c" className="center-column" style={{'borderLeft': '1px solid gray'}}>
                 <p className="title has-text-black">B<span className="is-size-5">log</span></p>
                 <p className="subtitle is-7 has-text-black">Lorem Ipsun</p>
             </div>
-            <div id="d" className="center-column" style={{'border-left': '1px solid gray'}}>
+            <div id="d" className="center-column" style={{'borderLeft': '1px solid gray'}}>
                 <figure className="center-column navbar-item image">
                     <a href="https://medium.com/Pablogot">
                         <i className="fab fa-lg fa-medium has-text-black" style={{width: '2rem', height: '2rem'}}></i>
@@ -25,7 +25,7 @@ const Footer = () => (
                     <p className="subtitle is-7 has-text-black">Medium</p>
                 </figure>
             </div>
-            <div id="e" className="center-column" style={{'border-left': '1px solid gray'}}>
+            <div id="e" className="center-column" style={{'borderLeft': '1px solid gray'}}>
                 <figure className="center-column navbar-item image">
                     <a href="https://github.com/Pablogot">
                         <i className="fab fa-lg fa-github has-text-black" style={{width: '2rem', height: '2rem'}}></i>
